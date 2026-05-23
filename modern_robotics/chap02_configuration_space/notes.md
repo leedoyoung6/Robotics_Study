@@ -1,3 +1,5 @@
+## 2.1. Degrees of Freedom of a Rigid Body
+
 # output 1
 configuration : 구성
 공간에서 행동하는 로봇을 표현하는 점들의 집합이라고 볼 수 있다.
@@ -20,3 +22,14 @@ configuration : 구성
 
 2. 자유도라는 게 정확히 관절의 어떤 것으로 구성된다는 걸까? 관절의 수는 아니고.
    -> 관절의 각도로 주어진다.
+
+
+-----
+## 2.2. Degrees of Freedom of a Robot
+
+# output 1
+<img width="921" height="679" alt="image" src="https://github.com/user-attachments/assets/c6817df1-c7e4-456f-af59-b991b2bee590" />
+
+# ?
+
+
