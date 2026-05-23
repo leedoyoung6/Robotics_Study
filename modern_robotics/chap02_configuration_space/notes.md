@@ -1,6 +1,6 @@
 ## 2.1. Degrees of Freedom of a Rigid Body
 
-# output 1
+# output 
 configuration : 구성
 공간에서 행동하는 로봇을 표현하는 점들의 집합이라고 볼 수 있다.
 로봇은 대부분 강체로 이루어져있고, 그 강체를 연결하는 joint로 구성된다.
@@ -27,9 +27,32 @@ configuration : 구성
 -----
 ## 2.2. Degrees of Freedom of a Robot
 
-# output 1
-<img width="921" height="679" alt="image" src="https://github.com/user-attachments/assets/c6817df1-c7e4-456f-af59-b991b2bee590" />
+# output
+
 
 # ?
+
+-----
+## 2.3.1. Configuration Space Topology
+
+# output
+C - space에서 중요한 점은 단지 자유도 뿐만이 아니다. 강체의 형태, 즉 위상 공간도 중요하다.
+어떤 물체를 붙이거나 잘라야 한다면, 그것은 다른 위상을 가지고 있는 것이다.
+붙이거나 자르지 않고 다른 물체를 표현할 수 있다면, 그 두 물체를 topologically equivalent 하다고 말한다.
+1차원에서는 직선, 닫힌 직선, 점이 서로 독립적이고,
+2차원에서는 평면, 원기둥의 표면, 구의 표면 등이 있다.
+
+어떤 물체의 움직임을, 위상 공간의 차원에서 분석해볼 수 있다.
+평면 위를 움직이는 한 점은 2차원 유클리드 공간, x, y축에서 움직이는 것으로 표현할 수 있다.
+구의 표면 위를 움직이는 한 점은 이 c - space의 topology는 2차원 구의 표면이다.
+2R Robot의 C - space의 topology는 torus이다. 첫 번째 관절과 두 번째 관절이 움직이며 0 - 2파이로 움직인다. 
+미끄러지고 회전할 수 있는 손잡이의 C-space topology는 원기둥인데, 이는 미끄러지면서 선형으로 움직이고 (원기둥의 높이), 0부터 2파이까지 회전(원기둥의 뚜껑)하기 때문이다.
+
+만약 2R Robot이나 미끄러지고 회전할 수 있는 손잡이의 C-space를 잘라서 평면으로 만든다면, 그 C-space의 한 점은 불연속적으로 변하는 걸 확인할 수 있다. 
+
+같은 차원을 가지는 C - space 라도, 서로 다른 topology를 가질 수 있다는 것이 이 결론이다. 
+즉, 평평한 유클리드 공간 뿐 아니라, 다양한 C - space의 topology에서도 점을 표현할 수 있어야 한다. 
+
+
 
 
