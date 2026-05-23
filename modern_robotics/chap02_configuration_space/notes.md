@@ -56,3 +56,35 @@ C - space에서 중요한 점은 단지 자유도 뿐만이 아니다. 강체의
 
 
 
+-----
+## 2.3.2. Configuration Space Representation
+
+# output
+configuration을 표현하는 방식에 대한 설명이다. 
+이 representation 방법에는 두 가지가 있다. 하나는 explicit한 방법이고, 하나는 implicit한 방법이다. 
+explicit한 방법은 필요한 최소 파라미터 수를 사용하는 것이다. 만약에 구를 표현한다면, 위도와 경도로 표현하는 방법이다. 
+implicit한 방법은 n차원의 표현 공간이, 더 고차원 표현 공간안에 압축돼있다고 본다. 그래서 x,y,z 3차원으로 표현한다. 
+explicit한 방법의 장점은 단순하다는 것이다. 하지만 문제는 특이점이 존재한다는 것이다. 예를 들어 적도를 이동할 때 위도는 완만하게 변화한다. 하지만 북극 근처에서 이동할 때, 위도는 급격히 변하게 되고 어느 순간 특이점이 발생한다. 이렇게 특이점이 발생하는 representaiton 방식은 좋은 방법이 아니라고 말한다. 
+그래서 여기서는 implicit한 방법을 사용한다. 특히, 유클리드 공간이 아닌 곡률 같은 특성이 있을 때 더욱 그렇다. 이 표현 방식을 회전 행렬이라고 부르기도 한다. implicit 방법은 조금 더 복잡하지만 특이점이 발생하지 않는다. 
+이러한 representation 방법의 변화는 configuration topology와는 무관하다. 표현 방식만 달라질 뿐이다. 
+최소 개수 좌표로 configuration을 표현하지 않고, 속도 또한 좌표의 시간 변화로 표현하지 않는다. 
+
+
+
+
+-----
+## 2.4 Configuration and Velocity Constraints
+
+# output
+
+
+
+-----
+## 2.5 Task space and Workspace
+
+# output
+Robot을 표현할 때 Configuration space 말고도 중요한 Task space, workspace가 있다.
+Task Space는 로봇이 작업하는 공간이다. 예를 들어 보드 마카로 평면에 무언가를 그린다고 하면, 유클리드 공간이 된다. 만약 어떤 강체의 위치와 방향을 움직인다면, 6차원(자유도) 공간이 된다. 
+workspace는 로봇의 end - effector가 도달하는 곳이다. 두 개의 revolute joint를 가진 robot을 생각하면, 하나는 180도, 150도를 가지고 있다 했을 때, 그 end effector가 도달 가능한 곳에 존재하게 된다. 이건 어떠한 작업과는 아무런 관련이 없고, 그냥 end effector가 도달 가능한 공간을 말한다. 이때, 어떤 방향으로 가더라도 도달 가능한 위치의 집합을 dexterous workspace라고 한다. 즉, 손으로 어딘가에 있는 사과를 집어야 할 때, 왼쪽으로 가든, 오른쪽으로 가든, 위로 가면서 시작하든, 사과를 집을 수만 있다면, 그 집을 수 있는 공간은 모두 dexterous workspace라고 보면 된다. 
+
+
