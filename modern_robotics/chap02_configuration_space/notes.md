@@ -28,7 +28,8 @@ configuration : 구성
 ## 2.2. Degrees of Freedom of a Robot
 
 # output
-<img width="2760" height="3864" alt="image" src="https://github.com/user-attachments/assets/de65b05d-0b2b-4fd3-92ad-33fbd5a613ae" />
+
+<img width="719" height="1017" alt="image" src="https://github.com/user-attachments/assets/d499546c-1c4b-41b1-9456-6564a1543104" />
 
 
 
@@ -77,8 +78,7 @@ explicit한 방법의 장점은 단순하다는 것이다. 하지만 문제는 �
 
 # output
 
-
-
+<img width="827" height="1143" alt="image" src="https://github.com/user-attachments/assets/718d4fbc-44a8-4c5f-9630-686e454277ed" />
 
 
 
