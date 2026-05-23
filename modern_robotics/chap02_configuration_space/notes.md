@@ -28,9 +28,9 @@ configuration : 구성
 ## 2.2. Degrees of Freedom of a Robot
 
 # output
+<img width="2760" height="3864" alt="image" src="https://github.com/user-attachments/assets/de65b05d-0b2b-4fd3-92ad-33fbd5a613ae" />
 
 
-# ?
 
 -----
 ## 2.3.1. Configuration Space Topology
@@ -76,6 +76,9 @@ explicit한 방법의 장점은 단순하다는 것이다. 하지만 문제는 �
 ## 2.4 Configuration and Velocity Constraints
 
 # output
+
+
+
 
 
 
