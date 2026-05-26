@@ -1,10 +1,10 @@
 # Gr00t N1.7 - Core code analyze
-https://github.com/Nvidia/Isaac-GR00T
 
-
+repo : https://github.com/Nvidia/Isaac-GR00T
 
 ## Directory Structure
 
+```text
 gr00t/              # Main package
   configs/          #   Training, data, and model configs
   data/             #   Data loading, embodiment tags, dataset processing
@@ -17,58 +17,81 @@ scripts/            # Deployment, conversion, and utility scripts
   deployment/       #   Platform install scripts (dgpu, orin, thor, spark)
 tests/              # pytest suite (markers: gpu, not gpu)
 getting_started/    # User-facing guides and notebooks
-
-
+```
 
 ## gr00t/policy/gr00t_policy.py 내의 get_action function
 
-unbatched_observations = self._unbatch_observation(observation) 
-- batch로 들어온 observation을 각 샘플로 쪼갠다. 
+```python
+unbatched_observations = self._unbatch_observation(observation)
+```
 
+- batch로 들어온 observation을 각 샘플로 쪼갠다.
+
+```python
 vla_step_data = self._to_vla_step_data(obs)
-- image, text, state를 담은, gr00t가 요구하는 데로 obs를 step data로 바꿈. 
+```
 
+- image, text, state를 담은, gr00t가 요구하는 데로 obs를 step data로 바꿈.
+
+```python
 processed_inputs.append(self.processor(messages))
+```
+
 - 위의 vla step data를 processor에 넣어 tokenization, image preprocessing, state normalization을 수행한다.
 
+```python
 model_pred = self.model.get_action(**collated_inputs)
+```
+
 - 전처리된 batch를 모델에 넣어 normalize된 action을 출력.
 
-unnormalized_action = self.processor.decode_action(normalized_action.cpu().numpy(), self.embodiment_tag, batched_states)
+```python
+unnormalized_action = self.processor.decode_action(
+    normalized_action.cpu().numpy(),
+    self.embodiment_tag,
+    batched_states
+)
+```
+
 - action을 입력으로 받아, 실제 로봇 embodiment에 맞는 물리적 값으로 변경
-
-
 
 ## gr00t/model/gr00t_n1d7/gr00t_n1d7.py
 
+```python
 class Gr00tN1d7ActionHead(nn.Module):
   ...
   self.model = DiT(**config.diffusion_model_cfg, cross_attention_dim=config.backbone_embedding_dim)
   ...
+```
+
 - Gr00t의 action model을 Dit로 정의하는 코드이다.
 - VLM에서 나온 token을 cross attention으로 받아서 action denoising을 수행하게 된다.
 
-
+```python
 actions = action_input.action
 noise = torch.randn(actions.shape, device=actions.device, dtype=actions.dtype)
 ...
 noisy_trajectory = (1 - t) * noise + t * actions
 velocity = actions - noise
-- action에 noise를 합치는 코드이다. 
-- noise는 torch.randn으로 만들어지고, t에 따라 점차 노이즈가 사라진다.  
-- velocity가 가장 중요한데, 이것이 flow matching에서 모델이 맞추어야 할 방향벡터이다. 즉, gr00t는 noise에서 실제 action으로 가는 방향벡터를 학습한다. 
+```
 
+- action에 noise를 합치는 코드이다.
+- noise는 torch.randn으로 만들어지고, t에 따라 점차 노이즈가 사라진다.
+- velocity가 가장 중요한데, 이것이 flow matching에서 모델이 맞추어야 할 방향벡터이다. 즉, gr00t는 noise에서 실제 action으로 가는 방향벡터를 학습한다.
 
-
+```python
 model_output = self.model(
     hidden_states=sa_embs,
     encoder_hidden_states=vl_embeds,
     timestep=t_discretized,
 )
+```
+
 - noised action, state embedding를 DiT에 넣고, vision - language token embedding을 cross attention 조건으로 받아 action을 출력한다.
 
-
-
+```python
 actions = actions + dt * pred_velocity * vel_strength
+```
+
 - random noise로 시작해서, 오일러 적분을 수행해가며 actions chunk를 출력하는 코드이다.
 
