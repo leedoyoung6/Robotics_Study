@@ -1,5 +1,5 @@
 # Paper Review
-NVIDIA, 2025
+GR00T N1: An Open Foundation Model for GeneralistHumanoid Robots, NVIDIA, 2025 ( https://arxiv.org/pdf/2503.14734 )
 
 
 
