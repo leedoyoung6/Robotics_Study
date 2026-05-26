@@ -39,3 +39,10 @@ Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware Tony Z. Zhao 
 ## Contribution
 - 저가형 하드웨어로 fine manipulation을 수행하는 양손 로봇 신경망 고안
 - action chunk 개념 도입 후 transformer 구조, CVAE를 활용해 단일 행동 step의 한계점을 극복하는 아이디어 제시
+
+
+
+## Idea
+- action chunk의 경계점에서 불연속적인 변화로 성능이 저하하지 않을까?
+- action chunk 방법이 오히려 더 오류를 강하게 만드는 경향도 있지 않을까?
+- action chunk를 고차원 임베딩에서 language instruction과 공동 학습해 두 모달이 연결됨으로써 더 유용한 의미를 담을 수 있지 않을까?
