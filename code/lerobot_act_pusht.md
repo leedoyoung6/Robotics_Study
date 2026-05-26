@@ -28,7 +28,7 @@ lerobot-train \
 - ImageNet으로 사전학습된 resnet18로 이미지의 feature를 추출한다.
 
 `use_vae: True`, `latent_dim: 32`, `kl_weight: 10.0` 
-- vae, variational autoencoder를 사용한다. z라는 벡터로 압축하고, 디코더 부분에서 이미지, z 벡터, 상태를 입력으로 받아 action chunk를 예측하는 방식이다.
+- vae, variational autoencoder를 사용한다. z라는 벡터로 압축하고, 이미지, z 벡터, 상태를 입력으로 받아 action chunk를 예측하는 방식이다.
 - latent의 차원은 32이고, vector 간에 너무 분산되지 않도록 하는 항을 위한 파라미터를 설정한다.
  
 `dim_model: 512`, `n_encoder_layers: 4`, `n_decoder_layers: 1`, `n_heads: 8`
