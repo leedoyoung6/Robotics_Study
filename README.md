@@ -3,7 +3,7 @@ Robotics 분야를 혼자 공부하며 정리해둔 저장소입니다.
 ## Content
 - Modern Robotics 강의 내용 정리 (https://www.coursera.org/specializations/modernrobotics)
 - World Model, Vision - language - action model 논문 및 코드 정리
-- 개인 노트북 CPU 성능으로 가능한 선에서 Python / MuJoCo / Isaac Lab 기반 실습 기록
+- 개인 노트북 CPU 성능 제약 내 Robotics 신경망 Fine - tuning / Inference / Simulation 기록 정리
   
 
 ## Rule
