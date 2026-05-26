@@ -1,0 +1,20 @@
+# Act - Pusht 
+
+## training
+
+lerobot-train \
+  --dataset.repo_id=lerobot/pusht \
+  --policy.type=act \
+  --output_dir=outputs/train/act_pusht_test \
+  --steps=200 \
+  --batch_size=8 \
+  --policy.device=cpu
+
+- 위의 명령어로 act policy를 pusht dataset으로 학습한다.
+- act는 action chunking transformer로, 하나의 action을 학습하고 출력하는 것이 아니라 transformer model 구조를 활용해  여러 action을 덩어리로 학습하고 출력하는 policy이다.
+- pusht는 T자 모양의 블록을, 점 모양의 agent를 사용해 정해진 위치에 밀어넣는 것이다. 
+
+## training - log
+
+'policy': {
+  'chunk_size': 100, 'n_action_steps': 100`
