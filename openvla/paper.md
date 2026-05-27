@@ -29,7 +29,9 @@ OpenVLA : An Open-Source Vision-Language-Action Model, MooJin Kim et al.,2024 ( 
 - widowx robot과 google robot에서 out of the box로 평가된다. 또한, 다양한 task에서 octo, rt-1-x보다 성능이 좋다. 또한 55B인 rt-2-x 와 성능이 비슷하거나, 더 좋다.
 <img width="980" height="980" alt="image" src="https://github.com/user-attachments/assets/9eef70cd-b6a5-4d91-be0c-4b5b733c40ea" />
 ( 출처 : https://www.trossenrobotics.com/widowx-250 )
+
 - franka - tabletop, franka - droid로 finetuning 한 게 diffusion policy보다 좋았다. 특정 single task에서는 diffusion policy가 좋았지만, 여러 object, instruction이 공존하는 task에서는 openvla의 성능이 더 좋았다. general robot policy로써의 가치를 입증했다.
+  
 - trainable parameter를 약 1.4%로 줄이고 난 이후에도 성능이 비슷한, parameter efficient 기법의 효과를 입증했다. 
 
 
