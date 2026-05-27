@@ -4,8 +4,6 @@
 
 - 목표는 image observation을 조건으로 하여 diffusion 방식으로 생성되는 그 action을 simulation으로 확인하는 것이었다.
 
-<br>
-
 ## Process
 
 1. conda_environment.yaml로 robomimic, robosuite, mujoco_py, diffusers 등 필요한 기초 의존성을 설치했다.
@@ -73,7 +71,6 @@ python eval.py \
   --device cpu
 ```
 
-<br>
 
 ## Result
 
