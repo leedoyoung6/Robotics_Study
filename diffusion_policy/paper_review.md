@@ -29,6 +29,8 @@ Diffusion Policy : Visuomotor Policy Learning via Action Diffusion, Cheng Chi et
 ## Method 
 <img width="2397" height="679" alt="image" src="https://github.com/user-attachments/assets/8cef0e0b-d628-4411-8f2f-c663915fa593" />
 
+<br>
+
 - diffusion policy는 action sequence를 직접 regression 하지 않고, noise action을 denoising하는 과정을 학습한다.
   
 - image generation diffusion model이 noise image를 깨끗한 image로 denoising 하듯이, noise action sequence를 denoising해서 실제 action으로 만들게 학습하는 것이다.
@@ -42,10 +44,17 @@ Diffusion Policy : Visuomotor Policy Learning via Action Diffusion, Cheng Chi et
 - Robomimic, Push-T, BlockPush, Franka Kitchen, real-world Push-T, Mug Flip, Sauce Pouring, Sauce Spreading 등 총 12개 task에서 sota보다 성능 향상을 보였다.
 
 - real world에서 다양한 실험을 했고, 높은 성공률을 보였다.
+
+<br>
   
 <img width="591" height="461" alt="image" src="https://github.com/user-attachments/assets/85b975c8-677a-4c74-b60e-90e51c515868" />
 
-- task를 수행하기 위해 여러 가능한 mode가 있는데, diffusion은 여러 mode를 탐색할 수 있는 가능성을 보였다. 
+<br>
+<br>
+
+- task를 수행하기 위해 여러 가능한 mode가 있는데, diffusion은 여러 mode를 탐색할 수 있는 가능성을 보였다.
+
+<br>
 
 <img width="775" height="244" alt="image" src="https://github.com/user-attachments/assets/48060a68-5c65-4a08-8548-e5c76e42f90a" />
 
