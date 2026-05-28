@@ -79,12 +79,20 @@
 - 이 두 twist는 같은 운동을 기술하는, 서로 다른 좌표계에서의 표현이라고 볼 수 있다.
 - twist는 각속도 3 vector, 선속도 3 vector를 표현하는 6vector이다.
 
-
+- 즉, 강체 속도는 6-vector twist로 표현될 수 있고, twist는 임의의 frame에서 표현될 수 있다.
+- 각속도의 matrix representation과 유사하게 twist도 표현할 수 있다.  
 
 <br>
 
 
 # 3.3.3. Exponential Coordinates of Rigid-Body Motion
+
+- 강체의 일반적인 운동은 회전 + 병진이며, 이는 screw axis와 twist로 표현된다.
+- exponential coordinates는 screw axis를 따라 각도 만큼 이동한 강체 motion을 의미한다.
+- matrix exponential은 little se(3)의 twist를, transformation matrix로 변환한다.
+- 순수 병진, 회전을 포함한 screw motion은 모두 closed - form matrix exponential 해를 가진다.
+- robot의 revolute, prismatic, helical 운동학은 모두 screw axis와 matrix exponential 방식으로 표현된다.
+
 
 
 <br>
@@ -92,3 +100,14 @@
 
 
 # 3.4. Wrenches
+
+- wrench란 힘과 돌림힘을 하나로 묶은 6 vector이다.
+- wrench는 각속도와 선속도를 표현하는 twist에 대응되는 표현이다.
+- 돌림힘은 위치와 힘의 cross product로 계산된다.
+- wrench도 twist와 같이 frame을 바꿔 표현 가능하며, adjoint transform을 사용한다.
+- twist와 wrench의 내적은 일률이고, frame에 무관한 값이다.
+
+
+## conclusion 
+- chap 3는 로봇의 3d motion, velocity, force를 표현하는 수학적인 기반에 대해 다루었다. 
+- 회전 행렬, matrix representation, twist, wrench, exponential coordinate 같은 robot의 운동을 다루는 행렬 표현을 위주로 배웠다. 
