@@ -1,4 +1,4 @@
-<img width="554" height="358" alt="image" src="https://github.com/user-attachments/assets/67be0bfb-c681-498c-b46f-ca6dd18d5421" /># 11.1. Control System Overview
+# 11.1. Control System Overview
 - chap 11은, robot이 단순히 motion planning만 하는 게 아니라, sensor feedback을 계속 읽으며, actuactor를 실시간으로 수정하는 closed loop system이라는 점이다.
 - controller는 encoder, force sensor, vision sensor 등의 정보를 받아, 보통 1kHz 수준으로 control law를 계산하고, 각 motor에 필요한 torque를 전달한다.
   - 실제 motor toque는 전류에 비례하므로, amplifier는 매우 빠른 inner current loop로 원하는 전류를 유지한다.
