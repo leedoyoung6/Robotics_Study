@@ -1,4 +1,5 @@
-Personal Robotics Study Repository
+[Robotics Study Repository] 
+
 Notes, experiments, and reproduction records while studying Robot Learning, VLA, and Robotics fundamentals.
 
 <br>
