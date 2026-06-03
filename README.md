@@ -22,7 +22,6 @@ Notes, experiments, and reproduction records while studying Robot Learning, VLA,
 
 ## diffusion_policy, gr00t, lerobot_act, openvla
 
-각 VLA / Imitation Learning 모델의 논문 및 코드를 학습하며:
 - Paper Summary
 - Core Code Analysis
 - Training / Inference Log
