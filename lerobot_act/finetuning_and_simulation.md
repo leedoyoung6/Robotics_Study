@@ -61,10 +61,19 @@ lerobot-eval \
 
 
 ## inference - Result
-<img width="618" height="619" alt="image" src="https://github.com/user-attachments/assets/8c536ddb-3e72-43ac-972e-ee080fcb292f" />
-<img width="616" height="620" alt="image" src="https://github.com/user-attachments/assets/09823bc2-f07c-4436-9607-bc14df5a0fbe" />
-
 - video 형태로 inference 결과가 출력됐다. 초록색 T자 모양으로 회색 T자를 이동시키는 것이 관건이다.
-- 처음 20step정도를 학습했을 때는 agent 역할을 하는 파란색 점이 뚜렷한 목적지가 없이 떠돌았었다.
-- 위의 이미지는 5000step을 학습한 것으로, 시작 위치가 상당히 어려웠지만 어떻게든 초록색 목적지로 끌고 가려는 모습, 방향을 맞추려는 모습을 보였다.
+- 5000step을 학습한 Act Policy는 Task에 성공하지 못했으나, 30000step을 학습한 후 Task에 거의 성공할 수 있었다.
+
+### 5000step 
+
+https://github.com/user-attachments/assets/5a72ebf3-86d5-4655-bb7a-f31f0bd99ef1
+
+
+### 30000step
+
+
+https://github.com/user-attachments/assets/58bd0e62-5414-4c4c-8041-73ed1519925f
+
+
+
 
