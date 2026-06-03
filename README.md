@@ -5,9 +5,9 @@ Notes, experiments, and reproduction records while studying Robot Learning, VLA,
 
 
 # Content
+- Vision-Language-Action Model, Imitation Learning Policy, Reinforcement Learning Policy, World Model 등 논문 및 코드 정리
+- Robotics 모델 Training / Fine - tuning / Inference / Evaluation / Simulation 기록 정리
 - Modern Robotics 강의 내용 정리 (https://www.coursera.org/specializations/modernrobotics)
-- World Model, Vision - language - action model 논문 및 코드 정리
-- 개인 노트북 CPU 성능 제약 내 Robotics 신경망 Fine - tuning / Inference / Simulation 기록 정리
 
 
 
