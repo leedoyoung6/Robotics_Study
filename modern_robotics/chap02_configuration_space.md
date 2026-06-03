@@ -1,6 +1,5 @@
 # 2.1. Degrees of Freedom of a Rigid Body
 
-## output 
 configuration : 구성
 공간에서 행동하는 로봇을 표현하는 점들의 집합이라고 볼 수 있다.
 로봇은 대부분 강체로 이루어져있고, 그 강체를 연결하는 joint로 구성된다.
@@ -27,7 +26,6 @@ configuration : 구성
 -----
 # 2.2. Degrees of Freedom of a Robot
 
-## output
 
 <img width="719" height="1017" alt="image" src="https://github.com/user-attachments/assets/d499546c-1c4b-41b1-9456-6564a1543104" />
 
@@ -36,7 +34,6 @@ configuration : 구성
 -----
 # 2.3.1. Configuration Space Topology
 
-## output
 C - space에서 중요한 점은 단지 자유도 뿐만이 아니다. 강체의 형태, 즉 위상 공간도 중요하다.
 어떤 물체를 붙이거나 잘라야 한다면, 그것은 다른 위상을 가지고 있는 것이다.
 붙이거나 자르지 않고 다른 물체를 표현할 수 있다면, 그 두 물체를 topologically equivalent 하다고 말한다.
@@ -60,7 +57,6 @@ C - space에서 중요한 점은 단지 자유도 뿐만이 아니다. 강체의
 -----
 # 2.3.2. Configuration Space Representation
 
-## output
 configuration을 표현하는 방식에 대한 설명이다. 
 이 representation 방법에는 두 가지가 있다. 하나는 explicit한 방법이고, 하나는 implicit한 방법이다. 
 explicit한 방법은 필요한 최소 파라미터 수를 사용하는 것이다. 만약에 구를 표현한다면, 위도와 경도로 표현하는 방법이다. 
@@ -76,7 +72,6 @@ explicit한 방법의 장점은 단순하다는 것이다. 하지만 문제는 �
 -----
 # 2.4 Configuration and Velocity Constraints
 
-## output
 
 <img width="827" height="1143" alt="image" src="https://github.com/user-attachments/assets/718d4fbc-44a8-4c5f-9630-686e454277ed" />
 
@@ -85,7 +80,6 @@ explicit한 방법의 장점은 단순하다는 것이다. 하지만 문제는 �
 -----
 # 2.5 Task space and Workspace
 
-## output
 Robot을 표현할 때 Configuration space 말고도 중요한 Task space, workspace가 있다.
 Task Space는 로봇이 작업하는 공간이다. 예를 들어 보드 마카로 평면에 무언가를 그린다고 하면, 유클리드 공간이 된다. 만약 어떤 강체의 위치와 방향을 움직인다면, 6차원(자유도) 공간이 된다. 
 workspace는 로봇의 end - effector가 도달하는 곳이다. 두 개의 revolute joint를 가진 robot을 생각하면, 하나는 180도, 150도를 가지고 있다 했을 때, 그 end effector가 도달 가능한 곳에 존재하게 된다. 이건 어떠한 작업과는 아무런 관련이 없고, 그냥 end effector가 도달 가능한 공간을 말한다. 이때, 어떤 방향으로 가더라도 도달 가능한 위치의 집합을 dexterous workspace라고 한다. 즉, 손으로 어딘가에 있는 사과를 집어야 할 때, 왼쪽으로 가든, 오른쪽으로 가든, 위로 가면서 시작하든, 사과를 집을 수만 있다면, 그 집을 수 있는 공간은 모두 dexterous workspace라고 보면 된다. 
