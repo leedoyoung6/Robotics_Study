@@ -20,7 +20,7 @@ Notes, experiments, and reproduction records while studying Robot Learning, VLA,
 
 # Folder Explanation 
 
-## diffusion_policy, gr00t, lerobot_act, openvla Folder
+## diffusion_policy, gr00t, lerobot_act, openvla
 - 각 VLA 모델, Imitation Learning Policy 모델의 논문과 코드를 학습하며 논문 요약, 코어 코드 공부, Training / Inference Log, Simulation Results 등을 정리
 - Ex. 
 <img width="2010" height="361" alt="image" src="https://github.com/user-attachments/assets/d484963e-36f3-45d8-9648-9f0c686cde5e" />
