@@ -38,7 +38,7 @@ https://github.com/user-attachments/assets/515c1b02-52c8-49e6-9b4e-37f1f90ce2dd
 
 
 ### Ex 2. Lerobot Act 
-- LeRobot의 Act policy를 Push-T dataset으로 Training 후 Inference한 결과물을 MuJoCo Simulation에서 확인
+- LeRobot의 Act policy를 Push-T dataset으로 Training 후 Inference한 결과물을 MuJoCo에서 확인
 
 
 
