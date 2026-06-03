@@ -2,6 +2,7 @@
 
 ## Training
 
+```
 lerobot-train \
   --dataset.repo_id=lerobot/pusht \
   --policy.type=act \
@@ -9,6 +10,8 @@ lerobot-train \
   --steps=200 \
   --batch_size=8 \
   --policy.device=cpu
+```
+
 
 - 위의 명령어로 act policy를 pusht dataset으로 학습한다.
 - act는 action chunking transformer로, 하나의 action을 학습하고 출력하는 것이 아니라 transformer model 구조를 활용해  여러 action을 덩어리로 학습하고 출력하는 policy이다.
@@ -48,6 +51,7 @@ lerobot-train \
 
 ## inference
 
+```
 lerobot-eval \
   --policy.path=/home/leedoyoung/robotics/lerobot/outputs/train/act_pusht_test/checkpoints/002000/pretrained_model \
   --env.type=pusht \
@@ -55,9 +59,9 @@ lerobot-eval \
   --eval.n_episodes=1 \
   --policy.use_amp=false \
   --policy.device=cpu
+```
 
   - evaluation을 하는 코드이다.
-
 
 
 ## inference - Result
